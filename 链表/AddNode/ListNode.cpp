@@ -20,13 +20,11 @@ void AddNode(Node ** pHead, int value)
 
 void DeleteNode(Node ** pHead, int value)
 {
-	Node* pNew = new Node();
+	Node* pNew = NULL;
+
 	if (pHead == NULL || *pHead == NULL)
-	{
-		cout << "该链表为空链表！！" << endl;
 		return;
-	}
-		
+	
 	pNew = *pHead;
 	Node* pNode = NULL;
 	while (pNew->m_value!=value)
