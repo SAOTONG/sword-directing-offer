@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <iostream>
 using namespace std;
+
 struct Node
 {
 	int m_value;
@@ -12,7 +13,7 @@ struct Node
 void AddNode(Node ** pHead, int value);
 void DeleteNode(Node ** pHead, int value);
 void PrintList(Node* pHead);
-
+void ReversePrintList(Node* pHead);
 #endif // !LISTNODE_H
 
 

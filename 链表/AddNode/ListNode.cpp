@@ -1,5 +1,5 @@
 #include "ListNode.h"
-
+#include <stack>
 void AddNode(Node ** pHead, int value)
 {
 	Node* pNew = new Node();
@@ -66,4 +66,34 @@ void PrintList(Node * pHead)
 
 	cout << "PrintList ends.\n";
 	
+}
+
+void ReversePrintList(Node * pHead)
+{
+	cout << "ReversePrintList starts.\n";
+	if (pHead == NULL)
+	{
+		cout << "ReversePrintList ends.\n";
+		return;
+	}
+	Node * pNode = pHead;
+	stack<Node *> nodes;
+	// 循环把链表的节点放入栈中
+	while (true)
+	{
+		nodes.push(pNode);
+		if (pNode->m_pNext == NULL)
+			break;
+		pNode = pNode->m_pNext;
+	}
+	// 循环输出栈中的元素
+	while (true)
+	{
+		pNode = nodes.top();
+		cout << pNode->m_value << endl;
+		nodes.pop();
+		if (nodes.empty())
+			break;
+	}
+	cout << "ReversePrintList ends.\n";
 }

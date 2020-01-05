@@ -3,7 +3,10 @@
 // ====================测试代码====================
 void Test(Node* pHead)
 {
+	cout << "正向打印链表节点\n";
 	PrintList(pHead);
+	cout << "反向打印链表节点\n";
+	ReversePrintList(pHead);
 }
 
 // 向空链表添加节点
@@ -82,6 +85,17 @@ void Test8()
 	Test(pNode);
 }
 
+// 输出4个节点链表
+void Test9()
+{
+	printf("\nTest9 begins.\n");
+	Node * pNode = new Node();
+	AddNode(&pNode, 1);
+	AddNode(&pNode, 2);
+	AddNode(&pNode, 3);
+	Test(pNode);
+}
+
 int main(int argc, char* argv[])
 {
 	Test1();
@@ -92,6 +106,7 @@ int main(int argc, char* argv[])
 	Test6();
 	Test7();
 	Test8();
+	Test9();
 	system("pause");
 	return 0;
 }
