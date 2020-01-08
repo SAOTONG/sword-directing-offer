@@ -55,25 +55,18 @@ void DeleteNode(Node ** pHead, int value)
 
 void PrintList(Node * pHead)
 {
-	cout << "PrintList starts.\n";
-
 	Node* pNode = pHead;
 	while (pNode != NULL)
 	{
 		cout << pNode->m_value << endl;
 		pNode = pNode->m_pNext;
 	}
-
-	cout << "PrintList ends.\n";
-	
 }
 
-void ReversePrintList(Node * pHead)
+void ReverseStackPrintList(Node * pHead)
 {
-	cout << "ReversePrintList starts.\n";
 	if (pHead == NULL)
 	{
-		cout << "ReversePrintList ends.\n";
 		return;
 	}
 	Node * pNode = pHead;
@@ -95,5 +88,18 @@ void ReversePrintList(Node * pHead)
 		if (nodes.empty())
 			break;
 	}
-	cout << "ReversePrintList ends.\n";
 }
+
+void ReverseRecursivePrintList(Node * pHead)
+{
+	if (pHead == NULL)
+		return;
+	Node * pNode = pHead;
+	if (pNode->m_pNext!=NULL)
+	{
+		ReverseRecursivePrintList(pNode->m_pNext);
+	}
+	cout << pNode->m_value << endl;
+}
+
+

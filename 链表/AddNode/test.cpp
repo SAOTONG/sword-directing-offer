@@ -5,8 +5,10 @@ void Test(Node* pHead)
 {
 	cout << "正向打印链表节点\n";
 	PrintList(pHead);
-	cout << "反向打印链表节点\n";
-	ReversePrintList(pHead);
+	cout << "栈反向打印链表节点\n";
+	ReverseStackPrintList(pHead);
+	cout << "递归反向打印链表节点\n";
+	ReverseRecursivePrintList(pHead);
 }
 
 // 向空链表添加节点

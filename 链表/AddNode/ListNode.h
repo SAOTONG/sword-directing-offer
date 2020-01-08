@@ -13,7 +13,8 @@ struct Node
 void AddNode(Node ** pHead, int value);
 void DeleteNode(Node ** pHead, int value);
 void PrintList(Node* pHead);
-void ReversePrintList(Node* pHead);
+void ReverseStackPrintList(Node* pHead);
+void ReverseRecursivePrintList(Node* pHead);
 #endif // !LISTNODE_H
 
 
